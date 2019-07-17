@@ -1,0 +1,22 @@
+
+<h1 class="d-flex justify-content-center m-5">Ajouter un Artiste</h1>
+<form (ngSubmit)="createArtist(newArtist)" #newArtist="ngForm" class="m-5">
+        <div>
+                <select [(ngModel)]="idnumero" name="numero_id">
+                  <option> quelle numero ?</option>
+                    <option *ngFor="let numero of numeros" [ngValue]="numero.id">{{numero.nom}}</option>
+                </select>
+              <input [hidden]="true" type='number' placeholder="Quelle numéro" name="numero_id" #numero_id="ngModel" [(ngModel)]="idNumero" [ngModel]>
+            </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="nom" #nom="ngModel" [ngModel] placeholder="nom de l'artiste">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="specialite" #specialite="ngModel" [ngModel] placeholder="Spécialité de l'artiste">
+        </div>
+        <div class="text-center">
+        <button type="submit" class="btn btn-primary">Enregistrer le Numéro</button>
+        <a  routerLink="/numero" routerLinkActive="active-nav"><button
+          class="btn btn-warning ml-2">Retour</button></a>
+    </div>
+      </form>

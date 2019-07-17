@@ -1,0 +1,20 @@
+<ng-template #content>
+        <div class="modal-body text-center mt-5">
+            <h3>{{numero.nom}}</h3>
+          <hr>
+        </div>
+        <ng-container *ngFor="let artist of artists; let i = index">
+          <h4 class="d-flex justify-content-center">Artiste :</h4>
+            <div class="text-center">
+              <img class="card-text ml-2">
+                <h5 class="card-title ml-2">Nom :{{artist.nom}}</h5>
+                <p class="card-text ml-2">  Specialité : {{artist.specialite}}</p>
+                <button class="btn btn-danger ml-4" type="bouton"  (click)="deleteArtist(artist.id, i)">Supprimer</button>
+            <hr>
+              </div>
+          </ng-container>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary text-center" (click)="close(content)">Fermer</button>
+        </div>
+      </ng-template>
+    

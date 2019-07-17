@@ -1,0 +1,43 @@
+<div class="card m-5">
+  <div class="card-body1">
+    <blockquote class="blockquote mb-0">
+      <p class="d-flex justify-content-center">Le wild circus s'efforce de trouver des numéros toujours plus inovant les
+        uns que les autres et de renommée mondiale.</p>
+      <footer class="blockquote-footer d-flex justify-content-center">"Les mots jaillissent en cascade, roulades et
+        pirouettes de clowns meublant les intervalles dans un cirque..."<cite title="Source Title">Les Neufs Visages du
+          coeur </cite></footer>
+    </blockquote>
+  </div>
+</div>
+
+<h2 class="d-flex justify-content-center">Retrouvez la liste de tous nos numéros</h2>
+
+
+
+
+<div class="container d-flex justify-content-center mt-5">
+<a routerLink="/newnumero" routerLinkActive="active-nav"><button
+  class="btn btn-warning mr-2">Ajouter un numéro</button></a>
+  <a  routerLink="/newartist" routerLinkActive="active-nav"><button
+    class="btn btn-warning ml-2">Ajouter un artiste</button></a>
+</div>
+
+<div class="container d-flex justify-content-center mt-5 mb-5 col-12">
+  <div class="row">
+  <div class="card card2 m-2" style="width: 18rem;" *ngFor="let numero of numeros; let i=index">
+    <img class="card-img-top" src="{{numero.picture}}" alt="Card image cap">
+    <div class="card-body text-center">
+      <h5 class="card-title text-center">{{ numero.nom }}</h5>
+      <p class="card-text">{{ numero.genre }}</p>
+      <button class="btn btn-primary mr-2" type="bouton" (click)='openModalArtists(numero)'>Détails</button>
+      <button class="btn btn-primary" type="bouton"
+        (click)="openEditionNumero(numero, numero.id, numero.nom, numero.genre)">Modifier</button>
+      <button class="btn btn-danger mt-2" type="bouton" (click)="deleteNumero(numero.id, i)">Supprimer</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<app-modifnumero [openEdit]="openEdit" [numeroForm]="numeroForm"></app-modifnumero>
+<app-list-artist [openModal]="openModal" [numero]="numero" [artists]="artists"></app-list-artist>

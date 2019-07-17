@@ -1,0 +1,36 @@
+<ng-template #content>
+        <div class="card">
+            <div class="modal-body">
+                <h3 class="title d-flex justify-content-center">Modifier votre Reservation</h3>
+            </div>
+            <div class="container-fluid mt-5 mb-5">
+                <div class="row modal1">
+                    <form class="offset-1 offset-md-2" (ngSubmit)="editResa(reservation,resaForm.id)" #reservation="ngForm">
+                        <div class="row mb-5">
+                            <p class="col-3 text-color">Nom :</p>
+                            <input class="col" type='text' placeholder="nom" name="nom" #nom="ngModel"
+                                [(ngModel)]="resaForm.nom" [ngModel]>
+                        </div>
+                        <div class="row mb-5">
+                            <p class="col-3 text-color">date :</p>
+                            <input class="col" type='text' placeholder="date" name="date" #date="ngModel"
+                                [(ngModel)]="resaForm.date" [ngModel]>
+                        </div>
+                        <div class="row mb-5">
+                            <p class="col-3 text-color">Email :</p>
+                            <input class="col" type='string' placeholder="email" name="email" #email="ngModel"
+                                [(ngModel)]="resaForm.email" [ngModel]>
+                        </div>
+                        <div class="row mb-5">
+                                <p class="col-3 text-color">Nombre de place :</p>
+                                <input class="col" type='string' placeholder="placement" name="placement" #placement="ngModel"
+                                    [(ngModel)]="resaForm.placement" [ngModel]>
+                            </div>
+                        <button class='btn btn-primary m-5' type="submit">Enregistrer</button>
+                        <button class="btn btn-danger m-5" type="bouton" (click)="close()">Fermer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    

@@ -1,0 +1,35 @@
+<div class='back-nav-bar'></div>
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+  <div>
+    <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="container-fluid px-0">
+    <div class="row w-100">
+      <div class='col-12'>
+        <div class="collapse navbar-collapse row"  id="navbarTogglerDemo03">
+          <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white mr-5" [routerLink]="[ '' ]" routerLinkActive="active-nav" 
+                >Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white mr-5" [routerLink]="[ 'numero' ]" routerLinkActive="active-nav">Nos numéros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white mr-5" [routerLink]="[ 'galerie' ]" routerLinkActive="active-nav">Galerie Photos</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link text-white mr-5" [routerLink]="[ 'ticket' ]" routerLinkActive="active-nav">Acheter des billets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white mr-5"[routerLink]="[ 'presentation' ]" routerLinkActive="active-nav" >Présentation</a>
+                  </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

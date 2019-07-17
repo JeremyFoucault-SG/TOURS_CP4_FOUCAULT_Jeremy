@@ -1,0 +1,23 @@
+<h1 class="d-flex justify-content-center m-5">Ajouter un numéro</h1>
+<form (ngSubmit)="createNumero(newNumero)" #newNumero="ngForm" class="m-5">
+        <div class="form-group">
+          <input type="text" class="form-control" name="nom" #nom="ngModel" [ngModel] placeholder="nom du numéro">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="genre" #genre="ngModel" [ngModel] placeholder="Genre du numéro">
+        </div>
+        <div class="form-group">
+                <input type="number" class="form-control" name="artist" #artist="ngModel" [ngModel] placeholder="Nombre d'artistes">
+              </div>
+              <div class="form-group">
+                    <input type="number" class="form-control" name="reservation" #reservation="ngModel" [ngModel] placeholder="Nombre de reservations">
+                  </div>
+                  <div class="form-group">
+                    <input type="string" class="form-control" name="picture" #picture="ngModel" [ngModel] placeholder="url photo">
+                  </div>
+        <div class="text-center">
+        <button type="submit" class="btn btn-primary">Enregistrer le Numéro</button>
+        <a  routerLink="/numero" routerLinkActive="active-nav"><button
+          class="btn btn-warning ml-2">Retour</button></a>
+    </div>
+      </form>
